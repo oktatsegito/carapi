@@ -16,7 +16,7 @@ const CarController = {
     },
     async tryIndex(req, res) {
         const cars = await Car.findAll({
-            attributes: ['id', 'brand', 'model', 'licensePlate'],
+            attributes: ['id', 'brand', 'model', 'licensePlate', 'year', 'dailyPrice'],
             include: { 
                 model: Booking, 
                 attributes: ['id', 'startDate', 'endDate'] }
